@@ -1,0 +1,97 @@
+/* Fuentes para el proyecto */
+
+/* Base */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body, 
+button, 
+input,  
+textarea{
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+body {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    line-height: 1.7;
+    font-weight: var(--font-medium);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+ul {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1, 
+h2, 
+h3 {
+    font-weight: var(--font-semi-bold);
+}
+
+h1 {
+    font-size: var(--h1-font-size);
+}
+
+h2 {
+    font-size: var(--h2-font-size);
+}
+
+h3 {
+    font-size: var(--h3-font-size)
+}
+/* Variables */
+
+:root {
+    --header-height: 3.5 rem; 
+
+    /* Colores */
+    --color-white: ;
+    --color-light: ;
+    --color-gray: ; 
+    --color-primary: ; 
+    --color-dark: ; 
+
+    /* Fuente */
+    --body-font: 'Rubik', sans-serif; 
+    --h1-font-size: 1.5rem; 
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem ;  
+    --normal-font-size: .9rem; 
+    --small-font-size: .8rem ; 
+
+    /* Peso de la fuente */
+    --font-medium: 400; 
+    --font-semi-bold: 600; 
+
+    /* Márgenes Inferiores */
+    --m-0-5: .5rem;
+    --m-0-75: .75rem;
+    --m-1: 1rem;
+    --m-2: 2rem;
+    --m-2-5: 2.5rem;
+
+    /* Padding */
+    --card-padding: 1.9rem 0.95rem;
+
+    /* Radio del borde */
+    --border-radius: 1.25rem; 
+
+    /* Sombra containers */
+    --box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1)
+}
+
