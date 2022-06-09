@@ -61,11 +61,11 @@ h3 {
     --header-height: 3.5 rem; 
 
     /* Colores */
-    --color-white: ;
-    --color-light: ;
-    --color-gray: ; 
-    --color-primary: ; 
-    --color-dark: ; 
+    --color-white: hsl(252, 30%, 100%) ;
+    --color-light: hsl(252, 30%, 92%);
+    --color-gray: hsl(252, 15%, 65%); 
+    --color-primary: hsl(352, 75%, 60%)  ; 
+    --color-dark: hsl(252, 30%, 17%); 
 
     /* Fuente */
     --body-font: 'Rubik', sans-serif; 
@@ -188,12 +188,12 @@ h3 {
 }
 
 .active-link::before {
-    content: ''; 
+    content: ""; 
     position: absolute; 
-    bottom: -0.75rem;
+    bottom: -0.5rem;
     left: 45%;
     width: 0.3rem;
     height: 0.3rem;
-    background-color: blue;
+    background-color: var(--color-primary);
     border-radius: 50%;
 }
