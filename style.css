@@ -62,10 +62,10 @@ h3 {
 
     /* Colores */
     --color-white: hsl(252, 30%, 100%) ;
-    --color-light: hsl(252, 30%, 17%);
+    --color-light: hsl(252, 30%, 92%) ; 
     --color-gray: hsl(252, 15%, 65%); 
     --color-primary: hsl(352, 75%, 60%)  ; 
-    --color-dark:  hsl(252, 30%, 92%);
+    --color-dark:  hsl(252, 30%, 17%);
 
     /* Fuente */
     --body-font: 'Rubik', sans-serif; 
@@ -383,7 +383,7 @@ justify-content: space-between;
 .about-text p{
     text-align: justify;
     margin-bottom: var(--m-1);
-    color: var(--color-light);
+    color: var(--color-dark);
 }
 
 .icon-about{
@@ -620,4 +620,17 @@ justify-content: space-between;
 
 .footer-text {
     text-align: center;
+}
+
+.skill-item-inner img {
+    position: relative;
+    margin-top: var(--m-2);
+    width: 7vw;
+}
+
+.skill .container .row {
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    
 }
