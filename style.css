@@ -62,10 +62,10 @@ h3 {
 
     /* Colores */
     --color-white: hsl(252, 30%, 100%) ;
-    --color-light: hsl(252, 30%, 92%);
+    --color-light: hsl(252, 30%, 17%);
     --color-gray: hsl(252, 15%, 65%); 
     --color-primary: hsl(352, 75%, 60%)  ; 
-    --color-dark: hsl(252, 30%, 17%); 
+    --color-dark:  hsl(252, 30%, 92%);
 
     /* Fuente */
     --body-font: 'Rubik', sans-serif; 
@@ -383,6 +383,7 @@ justify-content: space-between;
 .about-text p{
     text-align: justify;
     margin-bottom: var(--m-1);
+    color: var(--color-light);
 }
 
 .icon-about{
@@ -409,6 +410,7 @@ justify-content: space-between;
     cursor: pointer;
     white-space: nowrap;
     transition: 0.3s;
+    color: var(--color-dark);
 }
 
 .portfolio .portfolio-filter button.active {
@@ -550,7 +552,7 @@ justify-content: space-between;
 .contact-inputs {
     display: grid;
     row-gap: 1rem;
-    margin-bottom: 2-var(--m-2-5);
+    margin-bottom: var(--m-2-5);
 }
 
 .contact-content{
@@ -582,7 +584,7 @@ justify-content: space-between;
     height: 100%;
     padding: 1rem 1rem 1rem 0;
     background:none;
-    color: #fff;
+    color: --color-dark; 
     outline: none;
     border: none;
     z-index: 1;
@@ -590,7 +592,7 @@ justify-content: space-between;
 
 .contact-label {
     position: absolute;
-    top: 0.40rem;
+    top: -1rem;
     width: 100%;
     font-size: var(--small-font-size);
     transition: .3s;
@@ -608,4 +610,14 @@ justify-content: space-between;
     top: -.75rem;
     z-index: 10;
     color: var(--color-primary);
+}
+
+/* Footer */
+
+.footer {
+    padding: 60px 0;
+}
+
+.footer-text {
+    text-align: center;
 }
