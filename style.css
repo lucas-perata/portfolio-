@@ -630,7 +630,7 @@ justify-content: space-between;
 
 .skill .container .row {
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: nowrap;
     
 }
