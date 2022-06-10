@@ -256,6 +256,7 @@ h3 {
 .home .intro img{
     margin-bottom: var(--m-1);
     width: 13vw;
+    min-width: 190px;
 }
 
 .home .intro .social-icons {
