@@ -634,3 +634,10 @@ justify-content: space-between;
     flex-wrap: nowrap;
     
 }
+
+.skill-item-inner img:hover{
+    animation-name: button-push; 
+    animation-duration: 0.4s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
