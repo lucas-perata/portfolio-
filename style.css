@@ -128,6 +128,19 @@ h3 {
     padding-right: 15px;
 }
 
+/* Responsive */
+
+@media screen and (max-width:992px){
+    :root {
+    --h1-font-size: 1.75rem; 
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1rem ;  
+    --normal-font-size: 0.938rem; 
+    --small-font-size: .81rem ; 
+    }
+}
+
+
 /* botones home */
 
 .btn {
@@ -351,12 +364,13 @@ h3 {
 
 .about-img{
     flex: 0 0 25%;
-    max-width: 13vw; 
+max-width: 25%;    
 }
 
 .about-content {
     flex: 0 0 75%; 
     max-width: 75%;
+    margin-top: var(--m-2);
 }
 
 .about-content .about-text, 
@@ -820,4 +834,15 @@ justify-content: space-between;
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: var(--color-dark);
+  }
+
+  @media only screen and (max-width: 968px){
+    .about-content,
+    .about-img {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .about-img{
+        text-align: center;
+    }
   }
