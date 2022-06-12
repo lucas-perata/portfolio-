@@ -236,6 +236,14 @@ h3 {
     color: var(--color-primary)
 }
 
+.nav-close {
+    font-size: 1rem;
+    position: absolute;
+    top: 1rem;
+    right: 1.25rem;
+    cursor: pointer;
+}
+
 .nav-btns {
     display: inline-flex;
     align-items: center;
@@ -247,11 +255,14 @@ h3 {
     cursor: pointer;
 }
 
+.nav-close,
 .nav-toggle {
     font-size: 1.2 rem;
     cursor:pointer;
     display: none;
 }
+
+
 
 .active-link {
     position: relative;
@@ -363,8 +374,9 @@ h3 {
 /* About */
 
 .about-img{
-    flex: 0 0 25%;
-max-width: 25%;    
+    margin-top: var(--m-1);
+    flex: 0 0 23%;
+    max-width: 23%;    
 }
 
 .about-content {
@@ -673,6 +685,7 @@ justify-content: space-between;
     display: grid;
     place-items: center;
     font-size: var(--small-font-size);
+    display: none;
 }
 
 .customize-theme .card {
@@ -837,6 +850,12 @@ justify-content: space-between;
     background: var(--color-dark);
   }
 
+  @media only screen and (max-width: 1200px){
+    .customize-theme .card {
+        width: 50vw;
+    }
+  }
+
   @media only screen and (max-width: 968px){
     .about-content,
     .about-img {
@@ -845,5 +864,101 @@ justify-content: space-between;
     }
     .about-img{
         text-align: center;
+        width: 10px;
     }
+    
+    .customize-theme .card {
+        width: 58vw;
+    }
+  }
+
+  @media only screen and (max-width: 768px){
+    body {
+        margin: var(--header-height) 0 0 0;
+    }
+    .container {
+        max-width: 650px;
+    }
+    .nav {
+        height: var(--header-height);
+    }
+    .nav-list{
+        flex-direction: column;
+        row-gap: 1.5rem;
+    }
+    .nav-menu {
+        position: fixed;
+        background: var(--color-white);
+        width: 80%;
+        height: 100%;
+        top: 0;
+        right: 100%;
+        padding: 4rem 0 0 3rem;
+        box-shadow: -1px 0 4px var(--color-dark);
+        border-radius: 1rem 0 0 1rem;
+        z-index: 100;
+        transition: .3s;
+    }
+
+    .show-menu{
+        right: 0;
+    }
+    .nav-close,
+    .nav-toggle{
+        display: inline-flex;
+    }
+    .portfolio-item,
+    .contact-content, .contact-form,
+    .about-content .about-text {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .portfolio-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .skill .container .row {
+        align-items: center;
+        justify-content: center;
+        column-gap: 100px;
+        flex-wrap: wrap;
+    }
+
+    .portfolio-item-inner{
+        max-width: 360px;
+        margin: 0 auto;
+       }
+
+       .contact-form{
+        margin-top: var(--m-2);
+       }
+
+       .customize-theme .card {
+        width: 75vw;
+    }
+    
+  }
+
+  @media only screen and (max-width: 576px) {
+    .blog-item,
+    .portfolio-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+   }
+
+   .portfolio-item-inner{
+    max-width: 360px;
+    margin: 0 auto;
+   }
+
+   .contact-form{
+    margin-top: var(--m-2);
+   }
+
+   .customize-theme .card {
+    width: 95vw;
+    padding: 1rem;
+}
   }
