@@ -641,13 +641,14 @@ justify-content: space-between;
 .skill-item-inner img {
     position: relative;
     margin-top: var(--m-2);
-    width: 7vw;
+    width: 6vw;
+    min-width: 80px;
 }
 
 .skill .container .row {
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: nowrap;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .skill-item-inner img:hover{
