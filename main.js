@@ -142,3 +142,14 @@ colorPalette.forEach(color => {
   })
 })
 
+// TEMAS MOBILE 
+
+const themeMobile = document.querySelector("#theme-button-mobile"); 
+
+
+
+const openThemeModalMobile = () => {
+  themeModal.style.display = "grid"; 
+}
+
+themeMobile.addEventListener("click", openThemeModal)
