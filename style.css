@@ -53,6 +53,15 @@ h2 {
 h3 {
     font-size: var(--h3-font-size)
 }
+
+html {
+    scroll-behavior: smooth;
+  }
+
+  * {
+    scroll-behavior: smooth;
+  }
+
 /* Variables */
 
 :root {
@@ -823,7 +832,9 @@ justify-content: space-between;
     border-radius: 50%;
     
 }
-
+header.mobile {
+    display: none;
+   }
 
 /* SCROLLBAR */
 
@@ -887,7 +898,7 @@ justify-content: space-between;
     .nav-menu {
         position: fixed;
         background: var(--color-white);
-        width: 80%;
+        width: 40%;
         height: 100%;
         top: 0;
         right: -100%;
@@ -897,6 +908,14 @@ justify-content: space-between;
         z-index: 100;
         transition: .3s;
     }
+   
+   header.desktop {
+    display: none;
+   }
+
+   header.mobile {
+    display: block ;
+   }
 
     .show-menu{
         right: 0;

@@ -2,10 +2,7 @@
 
 window.onscroll = function(e) { 
 
-  if (window.innerWidth < 768) {
-    header.classList.remove("desktop") 
-   }
-   else {
+  
     let scrollY = window.pageYOffset || document.documentElement.scrollTop;
     let header = document.querySelector('.desktop');
     let height = -header.clientHeight;
@@ -16,7 +13,7 @@ window.onscroll = function(e) {
       : header.style.transform = 'translateY(' + height + 'px)'
 
     this.lastScroll = scrollY;
-    this.loaded = true;}
+    this.loaded = true;
 }
 
 console.log(window.innerWidth)
@@ -25,9 +22,9 @@ console.log(window.innerWidth)
 
 // Nav 
  
-const navMenu = document.getElementById("nav-menu"), 
-      navToggle = document.getElementById("nav-toggle"),
-      navClose = document.getElementById("nav-close")
+const navMenu = document.getElementById("nav-mobile"), 
+      navToggle = document.getElementById("nav-toggle-mobile"),
+      navClose = document.getElementById("nav-close-mobile")
 
 // SHOW MENU 
 
@@ -47,11 +44,75 @@ if(navClose){
 
 // ELIMINAR MENU MOBILE 
 
-const navLinks = document.querySelectorAll(".nav-link")
+const navLinks = document.querySelectorAll(".nav-item a")
 
 function linkAction(){
-  
   navMenu.classList.remove("show-menu")
 }
 
-navLinks.forEach (l => l.addEventListener("click", linkAction))
+const removeLinkSelector = () => {
+  navLinks.forEach(link => {
+  link.classList.remove("active-link")
+  })
+}
+
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    removeLinkSelector()
+    link.classList.toggle("active-link")
+  })
+})
+
+
+// TEMAS 
+
+const theme = document.querySelector("#theme-button"); 
+const themeModal = document.querySelector(".customize-theme");
+const fontSizes = document.querySelectorAll(".choose-size span")
+
+const openThemeModal = () => {
+  themeModal.style.display = "grid"; 
+}
+
+theme.addEventListener("click", openThemeModal)
+
+const closeThemeModal = (e) => {
+  if(e.target.classList.contains("customize-theme")) {
+    themeModal.style.display = "none"
+  }
+}
+
+themeModal.addEventListener("click", closeThemeModal)
+
+// Fuentes 
+
+const removeSizeSelector = () => {
+  fontSizes.forEach(size => {
+  size.classList.remove("active")
+  })
+}
+
+fontSizes.forEach(size => {
+  size.addEventListener("click", () => {
+    let fontSize;
+    removeSizeSelector()
+    size.classList.toggle("active") 
+    if(size.classList.contains("font-size-1")) {
+      fontSize = "12px"
+    }
+    else if(size.classList.contains("font-size-2")) {
+      fontSize = "14px"
+    }
+    else if(size.classList.contains("font-size-3")) {
+      fontSize = "16px"
+    }
+    else if(size.classList.contains("font-size-4")) {
+      fontSize = "18px"
+    }
+
+    document.querySelector("html").style.fontSize = fontSize;
+
+  })
+} )
+
+
