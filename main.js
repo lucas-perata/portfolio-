@@ -1,3 +1,5 @@
+// Oculta la barra de navegación durante el scroll
+
 window.onscroll = function(e) { 
     let scrollY = window.pageYOffset || document.documentElement.scrollTop;
     let header = document.querySelector('header');
