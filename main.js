@@ -142,6 +142,21 @@ colorPalette.forEach(color => {
   })
 })
 
+// Elimina la clase active de los botones
+
+const removeColorSelector = () => {
+  colorPalette.forEach(button => {
+  button.classList.remove("active")
+  })
+}
+
+colorPalette.forEach(button =>{
+  button.addEventListener("click",()=>{
+    removeColorSelector()
+    button.classList.toggle("active")
+  })
+})
+
 // TEMAS MOBILE 
 
 const themeMobile = document.querySelector("#theme-button-mobile"); 
