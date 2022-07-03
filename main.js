@@ -72,6 +72,10 @@ const themeModal = document.querySelector(".customize-theme");
 const fontSizes = document.querySelectorAll(".choose-size span");
 const colorPalette = document.querySelectorAll(".choose-color span"); 
 let root = document.querySelector(":root"); 
+const Bg1 = document.querySelector(".bg-1");
+const Bg2 = document.querySelector(".bg-2");
+const Bg3 = document.querySelector(".bg-3");
+
 
 const openThemeModal = () => {
   themeModal.style.display = "grid"; 
@@ -168,3 +172,46 @@ const openThemeModalMobile = () => {
 }
 
 themeMobile.addEventListener("click", openThemeModal)
+
+// FONDOS
+
+let lightColorLightness; 
+let whiteColorLightness; 
+let darkColorLightness; 
+
+// Cambio BACKGROUND 
+
+const changeBG = () => {
+  root.style.setProperty("--light-color-lightness", lightColorLightness)
+  root.style.setProperty("--white-color-lightness", whiteColorLightness)
+  root.style.setProperty("--dark-color-lightness", darkColorLightness)
+}
+
+Bg1.addEventListener("click", () => {
+  
+  Bg1.classList.add("active")
+  Bg2.classList.remove("active")
+  Bg3.classList.remove("active")
+  window.location.reload()
+})
+
+Bg2.addEventListener("click", () => {
+  darkColorLightness = "95%"
+  whiteColorLightness = "20%"
+  lightColorLightness = "15%"
+  Bg2.classList.add("active")
+  Bg1.classList.remove("active")
+  Bg3.classList.remove("active")
+  changeBG()
+}) 
+
+Bg3.addEventListener("click", () => {
+  darkColorLightness = "95%"
+  whiteColorLightness = "20%"
+  lightColorLightness = "0%"
+  Bg3.classList.add("active")
+  Bg2.classList.remove("active")
+  Bg1.classList.remove("active")
+  changeBG()
+})
+
