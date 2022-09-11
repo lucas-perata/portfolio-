@@ -943,6 +943,12 @@ header.mobile {
     max-width: 100%;
   }
 
+  .lni-close {
+    margin-left: 20px;
+    margin-right: 8px;
+    margin-top: 15px;
+  }
+
   .portfolio-item {
     flex: 0 0 50%;
     max-width: 50%;
