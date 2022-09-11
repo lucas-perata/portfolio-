@@ -461,6 +461,13 @@ html {
   max-width: 33%;
   margin-bottom: var(--m-1-5);
 }
+.mask {
+  border-radius: var(--border-radius);
+}
+
+.portfolio-item-thumbnail img {
+  border-radius: var(--border-radius);
+}
 
 .portfolio-item.hide {
   display: none;
