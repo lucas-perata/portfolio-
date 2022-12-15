@@ -584,7 +584,7 @@ html {
 
 .contact-data {
   display: grid;
-  row-gap: 3rem;
+  row-gap: 1rem;
   width: 40vw;
   max-width: 180px;
 }
